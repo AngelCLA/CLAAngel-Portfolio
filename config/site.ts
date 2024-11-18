@@ -9,12 +9,8 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Projects",
+      href: "/projects",
     },
     {
       label: "Blog",
@@ -27,43 +23,32 @@ export const siteConfig = {
   ],
   navMenuItems: [
     {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Dashboard",
-      href: "/dashboard",
+      label: "Home",
+      href: "/",
     },
     {
       label: "Projects",
       href: "/projects",
     },
     {
-      label: "Team",
-      href: "/team",
+      label: "Blog",
+      href: "/blog",
     },
+    
     {
-      label: "Calendar",
-      href: "/calendar",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
+      label: "About",
+      href: "/about",
     },
     {
       label: "Help & Feedback",
       href: "/help-feedback",
     },
-    {
-      label: "Logout",
-      href: "/logout",
-    },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
+    github: "https://github.com/AngelCLA",
+    mail: "mailto:202103003@upmys.edu.mx",
     docs: "https://nextui.org",
     discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    linkedin: "https://www.linkedin.com/in/luis-angel-cebreros-carrillo-a9b1b630a/",
   },
 };

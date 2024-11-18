@@ -1,4 +1,4 @@
-export default function ProjectsLayout({
+export default function PricingLayout({
   children,
 }: {
   children: React.ReactNode;
