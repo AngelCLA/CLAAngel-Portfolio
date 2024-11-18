@@ -257,3 +257,26 @@ export const LinkedInIcon: React.FC<IconSvgProps> = ({
     </svg>
   );
 };
+
+export const CLALogo: React.FC<IconSvgProps> = ({
+  size = 32,
+  width,
+  height,
+  ...props
+}) => (
+  <svg
+    fill="none"
+    height={size || height}
+    viewBox="0 0 192 205"
+    width={size || width}
+    {...props}
+  >
+    <path
+      d="M102.713 204.175C46.4696 204.175 0.712646 158.418 0.712646 102.175C0.712646 45.932 46.4696 0.174988 102.713 0.174988C139.005 0.174988 172.852 19.705 191.044 51.143L146.901 76.687C137.796 60.951 120.863 51.175 102.713 51.175C74.5906 51.175 51.7126 74.053 51.7126 102.175C51.7126 130.296 74.5906 153.175 102.713 153.175C120.865 153.175 137.798 143.399 146.904 127.66L191.047 153.203C172.855 184.644 139.007 204.175 102.713 204.175Z"
+      fill="currentColor"
+      fillRule="evenodd"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+
