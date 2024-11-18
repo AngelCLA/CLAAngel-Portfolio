@@ -83,26 +83,20 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarMenu>
-  <div className="mx-4 mt-2 flex flex-col gap-2">
-    {siteConfig.navMenuItems.map((item, index) => {
-      const pathname = usePathname(); // Ruta actual
-      const isActive = pathname === item.href; // Verifica si es la ruta actual
-
-      return (
-        <NavbarMenuItem key={`${item.label}-${index}`}>
-          <Link
-            color={isActive ? "primary" : "foreground"}
-            href={item.href}
-            size="lg"
-          >
-            {item.label}
-          </Link>
-        </NavbarMenuItem>
-      );
-    })}
-  </div>
-</NavbarMenu>
-
+        <div className="mx-4 mt-2 flex flex-col gap-2">
+          {siteConfig.navMenuItems.map((item, index) => (
+            <NavbarMenuItem key={`${item.label}-${index}`}>
+              <Link
+                color={index === 0 ? "foreground" : "foreground"}
+                href={item.href}
+                size="lg"
+              >
+                {item.label}
+              </Link>
+            </NavbarMenuItem>
+          ))}
+        </div>
+      </NavbarMenu>
 
     </NextUINavbar>
   );
