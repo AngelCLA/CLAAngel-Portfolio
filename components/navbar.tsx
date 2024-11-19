@@ -1,4 +1,4 @@
-"use client";
+import "@/styles/globals.css";
 import {
   Navbar as NextUINavbar,
   NavbarContent,
@@ -12,22 +12,18 @@ import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
-import { usePathname } from 'next/navigation';
-
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  GithubIcon,
-  EmailIcon,
-  LinkedInIcon,
-  CLALogo,
-} from "@/components/icons";
+import { GithubIcon, EmailIcon, LinkedInIcon, CLALogo } from "@/components/icons";
 
 export const Navbar = () => {
-
-
   return (
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar
+      maxWidth="xl"
+      position="static"
+      className="fixed top-0 left-0 w-full bg-opacity-80 bg-background z-50"
+    >
+
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -43,7 +39,6 @@ export const Navbar = () => {
                   linkStyles({ color: "foreground" }),
                   "data-[active=true]:text-primary data-[active=true]:font-medium",
                 )}
-                color="foreground"
                 href={item.href}
               >
                 {item.label}
@@ -53,10 +48,7 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
-        justify="end"
-      >
+      <NavbarContent className="hidden sm:flex basis-1/5 sm:basis-full" justify="end">
         <NavbarItem className="hidden sm:flex gap-2">
           <Link isExternal aria-label="Twitter" href={siteConfig.links.mail}>
             <EmailIcon className="text-default-500" />
@@ -97,7 +89,6 @@ export const Navbar = () => {
           ))}
         </div>
       </NavbarMenu>
-
     </NextUINavbar>
   );
 };
